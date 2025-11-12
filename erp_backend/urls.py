@@ -21,5 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('users.urls')),
     path('api/logistica/', include('logistica.urls')),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c1658b9099aa6ae43392d0bf5877bd3687095e0
 ]

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render
 from rest_framework import generics, permissions
 from .serializers import ProductoSerializer, ProveedorSerializer
@@ -45,3 +46,29 @@ class ProveedorDetails(generics.RetrieveUpdateDestroyAPIView):
 
 
     
+=======
+from rest_framework import generics
+from .models import Producto, Proveedor
+from .serializers import ProductoSerializer, ProveedorSerializer
+from rest_framework.permissions import IsAuthenticated
+
+class Productos(generics.ListCreateAPIView):
+    queryset = Producto
+    serializer_class = ProductoSerializer
+    permission_classes = [IsAuthenticated]
+
+class ProductosDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Producto
+    serializer_class = ProductoSerializer
+    permission_classes = [IsAuthenticated]
+
+class Proveedores(generics.ListCreateAPIView):
+    queryset = Proveedor
+    serializer_class = ProveedorSerializer 
+    permission_classes = [IsAuthenticated]
+
+class ProveedoresDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Proveedor
+    serializer_class = ProveedorSerializer 
+    permission_classes = [IsAuthenticated]
+>>>>>>> 0c1658b9099aa6ae43392d0bf5877bd3687095e0
