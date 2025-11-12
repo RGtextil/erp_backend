@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'users',
+    'logistica',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,21 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 ROOT_URLCONF = 'erp_backend.urls'
 
 TEMPLATES = [
@@ -91,7 +107,7 @@ DATABASES = {
 'ENGINE': 'django.db.backends.postgresql',
 'NAME': 'erp_db',
 'USER': 'postgres',
-'PASSWORD': 'micro7588',
+'PASSWORD': 'micro@7588#',
 'HOST': 'localhost',
 'PORT': '5432',
 }
