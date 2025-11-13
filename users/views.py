@@ -11,12 +11,13 @@ class RegisterView(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]
     serializer_class = RegisterSerializer
 
+class LoginView(TokenObtainPairView):
+    permission_classes = [permissions.AllowAny]
+    
 class DashboardView(generics.RetrieveAPIView):
     serializer_class = UserSerializer
 
     def get_object(self):
       return self.request.user
 
-class LoginView(TokenObtainPairView):
-    permission_classes = [permissions.AllowAny]
 

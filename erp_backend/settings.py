@@ -57,10 +57,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-<<<<<<< HEAD
-CORS_ALLOW_ALL_ORIGINS = True
 
-=======
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
@@ -76,7 +73,6 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
->>>>>>> 0c1658b9099aa6ae43392d0bf5877bd3687095e0
 ROOT_URLCONF = 'erp_backend.urls'
 
 TEMPLATES = [
