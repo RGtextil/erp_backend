@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'logistica',
+    'ventas',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,7 @@ DATABASES = {
 'ENGINE': 'django.db.backends.postgresql',
 'NAME': 'erp_db',
 'USER': 'postgres',
-'PASSWORD': 'micro@7588#',
+'PASSWORD': 'micro7588',
 'HOST': 'localhost',
 'PORT': '5432',
 }
