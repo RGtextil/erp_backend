@@ -19,4 +19,15 @@ class Proveedor(models.Model):
 
     def __srt__(self):
         return self.nombre
-    
+
+class PedidoProveedor(models.Model):
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    proveedor = models.CharField(max_length=20)
+    tela = models.CharField(max_length=20)
+    color = models.CharField(max_length=30)
+    cantidad = models.IntegerField()
+    fecha_pedido = models.DateTimeField(auto_now_add=True)
+
+    def __srt__(self):
+        return self.proveedor
+       
